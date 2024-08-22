@@ -1,0 +1,10 @@
+D:\MyProject\MyTest\MyTest\bin\Release\MyTest.exe.config
+D:\MyProject\MyTest\MyTest\bin\Release\MyTest.exe
+D:\MyProject\MyTest\MyTest\bin\Release\MyTest.pdb
+D:\MyProject\MyTest\MyTest\bin\Release\Newtonsoft.Json.dll
+D:\MyProject\MyTest\MyTest\bin\Release\Newtonsoft.Json.xml
+D:\MyProject\MyTest\MyTest\obj\Release\MyTest.csproj.CoreCompileInputs.cache
+D:\MyProject\MyTest\MyTest\obj\Release\MyTest.csproj.CopyComplete
+D:\MyProject\MyTest\MyTest\obj\Release\MyTest.exe
+D:\MyProject\MyTest\MyTest\obj\Release\MyTest.pdb
+D:\MyProject\MyTest\MyTest\obj\Release\MyTest.csproj.AssemblyReference.cache

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>canvas test</title>
+</head>
+<script src="jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var start_x, start_y, move_x, move_y, end_x, end_y;
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        var t = document.getElementById('myCanvas').offsetTop;//canvas上边距
+        var l = document.getElementById('myCanvas').offsetLeft;//canvas做边距
+
+        $("#myCanvas").mousedown(function (e) {
+            //alert("");
+            start_x = e.pageX - l;
+            start_y = e.pageY - t;
+            //开始本次绘画  
+            ctx.beginPath();
+            //画笔起始点  
+            ctx.moveTo(start_x, start_y);
+            //显示坐标
+            //document.getElementById('position').innerText = (`${start_x},${start_y}`);
+
+            //移动（pc）
+            $("#myCanvas").mousemove(function (e) {
+                console.log(222)
+                move_x = e.pageX - l;
+                move_y = e.pageY - t;
+                //根据鼠标路径绘画  
+                ctx.lineTo(move_x, move_y);
+                //立即渲染  
+                ctx.stroke();
+                //显示坐标
+                //document.getElementById('position').innerText = (`${move_x},${move_y}`);
+            })
+        });
+        //松开
+        document.getElementById("myCanvas").addEventListener("mouseup", function (e) {
+            $('#myCanvas').unbind('mousemove');
+            // end_x=e.pageX-l;
+            // end_y=e.pageY-t;
+            // //创建从当前点到开始点的路径
+            // ctx.closePath();
+            // //显示坐标
+            // document.getElementById('position').innerText=(`${end_x},${end_y}`);
+        })
+
+        $("#clear").click(function () {
+            canvas.height = canvas.height;
+        })
+
+        $("#submit").click(function () {
+            var imgBase64 = canvas.toDataURL();
+            $.ajax()
+        })
+    })
+</script>
+<body>
+    <canvas id="myCanvas" width="500" height="500" style="border: 1px solid;"></canvas>
+    <input type="button" value="清除" id="clear"/>
+    <input type="button" value="提交" id="submit" onclick="test()" />
+</body>
+</html>
