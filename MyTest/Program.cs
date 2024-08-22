@@ -71,6 +71,10 @@ namespace MyTest
         {
             return SqlHelper.ExecuteNonQuery(connection, CommandType.Text, sql);
         }
+        private string TestUpdate()
+        {
+            return null;
+        }
 
     }
 }
